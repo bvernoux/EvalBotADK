@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>EvalBotADK</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
+		<nature>com.ti.ccstudio.managedbuild.core.ccsNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>ubslib</name>
+			<type>2</type>
+			<location>F:/TI_EvalBot/SW-USBL-8049/usblib</location>
+		</link>
+		<link>
+			<name>driverlib</name>
+			<type>2</type>
+			<location>F:/TI_EvalBot/SW-EK-EVALBOT-7611/driverlib</location>
+		</link>
+		<link>
+			<name>inc</name>
+			<type>2</type>
+			<location>F:/TI_EvalBot/SW-EK-EVALBOT-7611/inc</location>
+		</link>
+		<link>
+			<name>drivers</name>
+			<type>2</type>
+			<location>F:/TI_EvalBot/SW-EK-EVALBOT-7611/boards/ek-evalbot/drivers</location>
+		</link>
+		<link>
+			<name>utils</name>
+			<type>2</type>
+			<location>F:/TI_EvalBot/SW-EK-EVALBOT-7611/utils</location>
+		</link>
+	</linkedResources>
+</projectDescription>
