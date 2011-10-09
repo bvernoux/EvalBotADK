@@ -2,8 +2,8 @@
 <?fileVersion 3.1.0?>
 
 <ManagedProjectBuildInfo>
-<project id="UsbHostADK.com.ti.ccstudio.buildDefinitions.TMS470.ProjectType.2091093805" name="ARM" projectType="com.ti.ccstudio.buildDefinitions.TMS470.ProjectType">
-<configuration artifactExtension="out" artifactName="UsbHostADK" description="" id="com.ti.ccstudio.buildDefinitions.TMS470.Debug.1733090028" name="Debug" parent="com.ti.ccstudio.buildDefinitions.TMS470.Debug">
+<project id="EvalBotADK.com.ti.ccstudio.buildDefinitions.TMS470.ProjectType.2091093805" name="ARM" projectType="com.ti.ccstudio.buildDefinitions.TMS470.ProjectType">
+<configuration artifactExtension="out" artifactName="EvalBotADK" description="" id="com.ti.ccstudio.buildDefinitions.TMS470.Debug.1733090028" name="Debug" parent="com.ti.ccstudio.buildDefinitions.TMS470.Debug">
 <toolChain id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.exe.DebugToolchain.1856495329" name="TI Code Generation Tools" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.TMS470_4.9.exe.linkerDebug.1813010086">
 <option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.914622231" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
 <listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=Cortex M.LM3S9B92"/>
@@ -35,16 +35,16 @@
 <listOptionValue builtIn="false" value="&quot;F:\TI_EvalBot\SW-EK-EVALBOT-7611&quot;"/>
 <listOptionValue builtIn="false" value="&quot;F:\TI_EvalBot\SW-EK-EVALBOT-7611\boards\ek-evalbot&quot;"/>
 <listOptionValue builtIn="false" value="&quot;F:\TI_EvalBot\SW-USBL-8049&quot;"/>
-<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsbHostADK}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/EvalBotADK}&quot;"/>
 <listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
 </option>
 <option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.LITTLE_ENDIAN.1365028235" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.LITTLE_ENDIAN" value="true" valueType="boolean"/>
 </tool>
 <tool id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.exe.linkerDebug.1813010086" name="TMS470 Linker" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.exe.linkerDebug">
-<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.MAP_FILE.721461252" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.MAP_FILE" value="&quot;UsbHostADK.map&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.MAP_FILE.721461252" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.MAP_FILE" value="&quot;EvalBotADK.map&quot;" valueType="string"/>
 <option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.STACK_SIZE.1250557382" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.STACK_SIZE" value="256" valueType="string"/>
 <option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.HEAP_SIZE.493653289" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.HEAP_SIZE" value="0" valueType="string"/>
-<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.OUTPUT_FILE.1053823539" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.OUTPUT_FILE" value="&quot;UsbHostADK.out&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.OUTPUT_FILE.1053823539" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.OUTPUT_FILE" value="&quot;EvalBotADK.out&quot;" valueType="string"/>
 <option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.LIBRARY.1668404416" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.LIBRARY" valueType="libs">
 <listOptionValue builtIn="false" value="&quot;rtsv7M3_T_le_eabi.lib&quot;"/>
 </option>
@@ -56,7 +56,7 @@
 <macros expandEnvironmentMacros="true"/>
 </toolChain>
 </configuration>
-<configuration artifactExtension="out" artifactName="UsbHostADK" description="" id="com.ti.ccstudio.buildDefinitions.TMS470.Release.778679860" name="Release" parent="com.ti.ccstudio.buildDefinitions.TMS470.Release">
+<configuration artifactExtension="out" artifactName="EvalBotADK" description="" id="com.ti.ccstudio.buildDefinitions.TMS470.Release.778679860" name="Release" parent="com.ti.ccstudio.buildDefinitions.TMS470.Release">
 <toolChain id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.exe.ReleaseToolchain.1143706885" name="TI Code Generation Tools" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.exe.ReleaseToolchain" targetTool="com.ti.ccstudio.buildDefinitions.TMS470_4.9.exe.linkerRelease.710304863">
 <option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.304972543" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
 <listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=Cortex M.LM3S9B92"/>
@@ -88,16 +88,16 @@
 <listOptionValue builtIn="false" value="&quot;F:\TI_EvalBot\SW-EK-EVALBOT-7611&quot;"/>
 <listOptionValue builtIn="false" value="&quot;F:\TI_EvalBot\SW-EK-EVALBOT-7611\boards\ek-evalbot&quot;"/>
 <listOptionValue builtIn="false" value="&quot;F:\TI_EvalBot\SW-USBL-8049&quot;"/>
-<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsbHostADK}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/EvalBotADK}&quot;"/>
 <listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
 </option>
 <option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.LITTLE_ENDIAN.1234884024" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.LITTLE_ENDIAN" value="true" valueType="boolean"/>
 </tool>
 <tool id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.exe.linkerRelease.710304863" name="TMS470 Linker" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.exe.linkerRelease">
-<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.MAP_FILE.1754710161" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.MAP_FILE" value="&quot;UsbHostADK.map&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.MAP_FILE.1754710161" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.MAP_FILE" value="&quot;EvalBotADK.map&quot;" valueType="string"/>
 <option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.STACK_SIZE.489152861" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.STACK_SIZE" value="256" valueType="string"/>
 <option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.HEAP_SIZE.647610660" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.HEAP_SIZE" value="0" valueType="string"/>
-<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.OUTPUT_FILE.1715149615" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.OUTPUT_FILE" value="&quot;UsbHostADK.out&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.OUTPUT_FILE.1715149615" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.OUTPUT_FILE" value="&quot;EvalBotADK.out&quot;" valueType="string"/>
 <option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.LIBRARY.1280830621" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.LIBRARY" valueType="libs">
 <listOptionValue builtIn="false" value="&quot;rtsv7M3_T_le_eabi.lib&quot;"/>
 </option>
