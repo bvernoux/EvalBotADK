@@ -24,8 +24,8 @@
 
 #include "usb_android.h"
 
-#define BULK_READ_TIMEOUT	(2)
-#define BULK_WRITE_TIMEOUT	(0) /* 0=No Timeout*/
+#define BULK_READ_TIMEOUT    (2)
+#define BULK_WRITE_TIMEOUT    (0) /* 0=No Timeout*/
 
 t_u8 configDesc[256];
 t_u16 configDescSize = 256;
@@ -216,11 +216,11 @@ int getConfigDesc(tUSBHostDevice *pDevice)
         UARTprintf(" bLength=0x%02X (shall be 0x09)\n", pconf_desc->bLength);
         UARTprintf(" wTotalLength=0x%04X\n", pconf_desc->wTotalLength);
         UARTprintf(" bDescriptorType=0x%02X\n", pconf_desc->bDescriptorType);
-        UARTprintf(" bNumInterfaces=0x%02X\n", pconf_desc->bNumInterfaces);	
+        UARTprintf(" bNumInterfaces=0x%02X\n", pconf_desc->bNumInterfaces);    
         UARTprintf(" bConfigurationValue=0x%02X\n", pconf_desc->bConfigurationValue);
         UARTprintf(" iConfiguration=0x%02X\n", pconf_desc->iConfiguration);
         UARTprintf(" bmAttributes=0x%02X\n", pconf_desc->bmAttributes);
-        UARTprintf(" bMaxPower=0x%02X (unit of 2mA)\n\n", pconf_desc->bMaxPower);	
+        UARTprintf(" bMaxPower=0x%02X (unit of 2mA)\n\n", pconf_desc->bMaxPower);    
     }
     
     return(ulBytes);
@@ -278,28 +278,28 @@ int getDeviceDesc(tUSBHostDevice *pDevice)
     UARTprintf("getDeviceDesc() ctrlReq return %d bytes\n", ulBytes);
     if(ulBytes > 0)
     {
-        UARTprintf("DeviceDesc details:\n");		
+        UARTprintf("DeviceDesc details:\n");        
         UARTprintf(" bLength=0x%02X (shall be 0x12)\n",  pdev_desc->bLength);
         UARTprintf(" bDescriptorType=0x%02X\n", pdev_desc->bDescriptorType);
         UARTprintf(" bcdUSB=0x%02X (USB2.0=0x200)\n",  pdev_desc->bcdUSB);
         UARTprintf(" bDeviceClass=0x%02X\n",  pdev_desc->bDeviceClass);
-        UARTprintf(" bDeviceSubClass=0x%02X\n", pdev_desc->bDeviceSubClass);	
+        UARTprintf(" bDeviceSubClass=0x%02X\n", pdev_desc->bDeviceSubClass);    
         UARTprintf(" bDeviceProtocol=0x%02X\n", pdev_desc->bDeviceProtocol);
         UARTprintf(" bMaxPacketSize0=0x%02X\n", pdev_desc->bMaxPacketSize0);
         UARTprintf(" idVendor=0x%02X\n", pdev_desc->idVendor);
         UARTprintf(" idProduct=0x%02X\n", pdev_desc->idProduct);
         UARTprintf(" bcdDevice=0x%02X\n", pdev_desc->bcdDevice);
-        UARTprintf(" iManufacturer=0x%02X\n", pdev_desc->iManufacturer);		
-        UARTprintf(" iProduct=0x%02X\n", pdev_desc->iProduct);	
-        UARTprintf(" iSerialNumber=0x%02X\n", pdev_desc->iSerialNumber);	
-        UARTprintf(" bNumConfigurations=0x%02X\n\n", pdev_desc->bNumConfigurations);		
+        UARTprintf(" iManufacturer=0x%02X\n", pdev_desc->iManufacturer);        
+        UARTprintf(" iProduct=0x%02X\n", pdev_desc->iProduct);    
+        UARTprintf(" iSerialNumber=0x%02X\n", pdev_desc->iSerialNumber);    
+        UARTprintf(" bNumConfigurations=0x%02X\n\n", pdev_desc->bNumConfigurations);        
     }
     
     return(ulBytes);
 }
 
 int getProtocol(tUSBHostDevice *pDevice)
-{	
+{    
     t_u16 protocol = 0xFFFF;
     tUSBRequest SetupPacket;
     t_u32 ulBytes;
@@ -408,7 +408,7 @@ bool switchDevice(tUSBHostDevice *pDevice)
 
     sendStartUpAccessoryMode(pDevice);
 
-    UARTprintf("End switchDevice Time=%d\n", g_ulSysTickCount);	
+    UARTprintf("End switchDevice Time=%d\n", g_ulSysTickCount);    
     
     return true;
 }
@@ -440,7 +440,7 @@ void USBHANDROIDCallback(t_u32 ulInstance, t_u32 ulEvent, void *pvData)
         // device.
         case ANDROID_EVENT_OPEN:
         {
-            UARTprintf("Android Open OK Time=%d\n", g_ulSysTickCount);	
+            UARTprintf("Android Open OK Time=%d\n", g_ulSysTickCount);    
             // Proceed to the enumeration state.
             g_eState = STATE_DEVICE_ENUM;
             break;
@@ -450,7 +450,7 @@ void USBHANDROIDCallback(t_u32 ulInstance, t_u32 ulEvent, void *pvData)
         // the device is no longer present.
         case ANDROID_EVENT_CLOSE:
         {
-            UARTprintf("Android Close OK Time=%d\n", g_ulSysTickCount);			
+            UARTprintf("Android Close OK Time=%d\n", g_ulSysTickCount);            
             // Go back to the "no device" state and wait for a new connection.
             g_eState = STATE_NO_DEVICE;
             break;
@@ -458,7 +458,7 @@ void USBHANDROIDCallback(t_u32 ulInstance, t_u32 ulEvent, void *pvData)
 
         case ANDROID_EVENT_RX_AVAILABLE:
         {
-            UARTprintf("Android RX avail Time=%d\n", g_ulSysTickCount);			
+            UARTprintf("Android RX avail Time=%d\n", g_ulSysTickCount);            
             rx_data_available += 1;
             break;
         }
@@ -501,7 +501,7 @@ static void * USBHANDROIDOpen(tUSBHostDevice *pDevice)
     UARTprintf(" bLength=0x%02X (shall be 0x09)\n", pDevice->pConfigDescriptor->bLength);
     UARTprintf(" wTotalLength=0x%04X\n", pDevice->pConfigDescriptor->wTotalLength);
     UARTprintf(" bDescriptorType=0x%02X\n", pDevice->pConfigDescriptor->bDescriptorType);
-    UARTprintf(" bNumInterfaces=0x%02X\n", pDevice->pConfigDescriptor->bNumInterfaces);	
+    UARTprintf(" bNumInterfaces=0x%02X\n", pDevice->pConfigDescriptor->bNumInterfaces);    
     UARTprintf(" bConfigurationValue=0x%02X\n", pDevice->pConfigDescriptor->bConfigurationValue);
     UARTprintf(" iConfiguration=0x%02X\n", pDevice->pConfigDescriptor->iConfiguration);
     UARTprintf(" bmAttributes=0x%02X\n", pDevice->pConfigDescriptor->bmAttributes);
@@ -512,15 +512,15 @@ static void * USBHANDROIDOpen(tUSBHostDevice *pDevice)
     UARTprintf(" bDescriptorType=0x%02X\n",  pDevice->DeviceDescriptor.bDescriptorType);
     UARTprintf(" bcdUSB=0x%02X (USB2.0=0x200)\n",  pDevice->DeviceDescriptor.bcdUSB);
     UARTprintf(" bDeviceClass=0x%02X\n",  pDevice->DeviceDescriptor.bDeviceClass);
-    UARTprintf(" bDeviceSubClass=0x%02X\n",  pDevice->DeviceDescriptor.bDeviceSubClass);	
+    UARTprintf(" bDeviceSubClass=0x%02X\n",  pDevice->DeviceDescriptor.bDeviceSubClass);    
     UARTprintf(" bDeviceProtocol=0x%02X\n",  pDevice->DeviceDescriptor.bDeviceProtocol);
     UARTprintf(" bMaxPacketSize0=0x%02X\n",  pDevice->DeviceDescriptor.bMaxPacketSize0);
     UARTprintf(" idVendor=0x%02X\n",  pDevice->DeviceDescriptor.idVendor);
     UARTprintf(" idProduct=0x%02X\n",  pDevice->DeviceDescriptor.idProduct);
     UARTprintf(" bcdDevice=0x%02X\n",  pDevice->DeviceDescriptor.bcdDevice);
-    UARTprintf(" iManufacturer=0x%02X\n",  pDevice->DeviceDescriptor.iManufacturer);		
-    UARTprintf(" iProduct=0x%02X\n",  pDevice->DeviceDescriptor.iProduct);	
-    UARTprintf(" iSerialNumber=0x%02X\n",  pDevice->DeviceDescriptor.iSerialNumber);	
+    UARTprintf(" iManufacturer=0x%02X\n",  pDevice->DeviceDescriptor.iManufacturer);        
+    UARTprintf(" iProduct=0x%02X\n",  pDevice->DeviceDescriptor.iProduct);    
+    UARTprintf(" iSerialNumber=0x%02X\n",  pDevice->DeviceDescriptor.iSerialNumber);    
     UARTprintf(" bNumConfigurations=0x%02X\n",  pDevice->DeviceDescriptor.bNumConfigurations);
     UARTprintf("End pDevice->pConfigDescriptor details Time=%d:\n\n", g_ulSysTickCount);
 */
@@ -550,7 +550,7 @@ static void * USBHANDROIDOpen(tUSBHostDevice *pDevice)
         UARTprintf("Found Android Accessory device Time=%d\n", g_ulSysTickCount);
 
         // Get the interface descriptor.
-        pInterface = USBDescGetInterface(pDevice->pConfigDescriptor, 0, 0);	
+        pInterface = USBDescGetInterface(pDevice->pConfigDescriptor, 0, 0);    
 
         // Loop through the endpoints of the device.
         for(iIdx = 0; iIdx < 3; iIdx++)
@@ -597,7 +597,7 @@ static void * USBHANDROIDOpen(tUSBHostDevice *pDevice)
                 }
                 else
                 {
-                    UARTprintf("Endpoint Bulk OUT alloc USB Pipe\n");				
+                    UARTprintf("Endpoint Bulk OUT alloc USB Pipe\n");
                     // Allocate the USB Pipe for this Bulk OUT endpoint.
                     g_USBHANDROIDDevice.ulBulkOutPipe = USBHCDPipeAllocSize(0, USBHCD_PIPE_BULK_OUT_DMA,
                                                                             pDevice->ulAddress,
@@ -631,7 +631,7 @@ static void * USBHANDROIDOpen(tUSBHostDevice *pDevice)
         g_USBHANDROIDDevice.connected = false;  
     }
 
-    UARTprintf("\nEnd USBHANDROIDOpen Time=%d\n", g_ulSysTickCount);		
+    UARTprintf("\nEnd USBHANDROIDOpen Time=%d\n", g_ulSysTickCount);        
     // Return the only instance of this device.
     return(&g_USBHANDROIDDevice);
 }
@@ -651,7 +651,7 @@ static void * USBHANDROIDOpen(tUSBHostDevice *pDevice)
 //*****************************************************************************
 static void USBHANDROIDClose(void *pvInstance)
 {
-    UARTprintf("Start USBHANDROIDClose Time=%d\n", g_ulSysTickCount);	
+    UARTprintf("Start USBHANDROIDClose Time=%d\n", g_ulSysTickCount);    
 
     // Do nothing if there is not a driver open.
     if(g_USBHANDROIDDevice.pDevice == 0)
@@ -675,7 +675,7 @@ static void USBHANDROIDClose(void *pvInstance)
     // Free the Bulk OUT pipe.
     if(g_USBHANDROIDDevice.ulBulkOutPipe != 0)
     {
-        UARTprintf("Endpoint Bulk OUT Free USB Pipe 0x%08X\n", g_USBHANDROIDDevice.ulBulkOutPipe);		
+        UARTprintf("Endpoint Bulk OUT Free USB Pipe 0x%08X\n", g_USBHANDROIDDevice.ulBulkOutPipe);        
         USBHCDPipeFree(g_USBHANDROIDDevice.ulBulkOutPipe);
     }
 
@@ -689,7 +689,7 @@ static void USBHANDROIDClose(void *pvInstance)
     // Clear the callback indicating that the device is now closed.
     g_USBHANDROIDDevice.pfnCallback = 0;
     
-    UARTprintf("End USBHANDROIDClose Time=%d\n", g_ulSysTickCount);	
+    UARTprintf("End USBHANDROIDClose Time=%d\n", g_ulSysTickCount);    
 }
 
 //*****************************************************************************
@@ -810,7 +810,7 @@ tUSBMode g_eCurrentUSBMode;
 void
 __error__(char *pcFilename, t_u32 ulLine)
 {
-	while(1);
+    while(1);
 }
 #endif
 
@@ -870,14 +870,14 @@ t_u32 GetTime_ms(void)
 
 t_u32 Delta_time_ms(t_u32 start, t_u32 end)
 {
-	t_u32 diff;
+    t_u32 diff;
 
     if(end > start)
     {
-    	diff=end-start;
+        diff=end-start;
     }else
     {
-    	diff=MAX_T_U32-(start-end)+1;
+        diff=MAX_T_U32-(start-end)+1;
     }
     
     return diff;
@@ -892,7 +892,7 @@ void WaitTime_ms(t_u32 wait_ms)
     
     do
     {
-		end = GetTime_ms();
+        end = GetTime_ms();
         tickms = Delta_time_ms(start, end);
     }while(tickms < wait_ms);
 }
@@ -972,7 +972,7 @@ void USBHCDEvents(void *pvData)
 
         default:
         {
-            UARTprintf("Unknown Event\n");        	
+            UARTprintf("Unknown Event\n");            
             break;
         }
     }
@@ -985,7 +985,7 @@ void Hardware_Init(void)
     g_eUIState = STATE_NO_DEVICE;
 
     // Set the clocking to run from the PLL at 50MHz.
-    ROM_SysCtlClockSet(SYSCTL_SYSDIV_4 | SYSCTL_USE_PLL | SYSCTL_OSC_MAIN |	SYSCTL_XTAL_16MHZ);
+    ROM_SysCtlClockSet(SYSCTL_SYSDIV_4 | SYSCTL_USE_PLL | SYSCTL_OSC_MAIN |    SYSCTL_XTAL_16MHZ);
 
     // Initialize the UART.
     ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
@@ -1046,9 +1046,9 @@ void Hardware_Init(void)
 
     // Enable the GPIO pin for the USB HOST / DEVICE Selection (PB0).  Set the direction as output, and
     // enable the GPIO pin for digital function.
-    GPIO_PORTB_DIR_R |= GPIO_PIN_0;	GPIO_PORTB_DEN_R |= GPIO_PIN_0;
+    GPIO_PORTB_DIR_R |= GPIO_PIN_0;    GPIO_PORTB_DEN_R |= GPIO_PIN_0;
     // PB0 = GND =USB HOST Enabled.
-    GPIO_PORTB_DATA_R &= ~(GPIO_PIN_0);  	
+    GPIO_PORTB_DATA_R &= ~(GPIO_PIN_0);      
 
     // Enable the uDMA controller and set up the control table base.
     ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UDMA);
@@ -1179,7 +1179,7 @@ int ANDROID_read(t_AndroidInstance handle, t_u8* const buff/*out*/, const int le
         }
         // Data have not changed assume no data received
         if(nbdata == 0)
-        	ulBytes = 0;
+            ulBytes = 0;
     }
     else
     {
@@ -1198,7 +1198,7 @@ int ANDROID_write(t_AndroidInstance handle, const void * const buff/*in*/, int l
     // Get a pointer to the device instance data from the handle.
     pANDROIDDevice = (t_USBHANDROIDInstance *)handle;
     if(pANDROIDDevice != NULL)
-    {	
+    {    
         ulBytes = USBHCDPipeWrite(pANDROIDDevice->ulBulkOutPipe, (unsigned char*)buff, len);
     }else
     {

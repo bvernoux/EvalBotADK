@@ -37,7 +37,7 @@ typedef short t_i16;
 typedef unsigned long t_u32;
 typedef long t_i32;
 
-#define MAX_T_U32	(0xFFFFFFFF)
+#define MAX_T_U32    (0xFFFFFFFF)
 
 /* Android DemoKit protocol */
 #define  LED3_RED       2
@@ -78,31 +78,31 @@ typedef long t_i32;
 /********************************/
 
 /* Input User Switch 1, 2 & Bumper Switch 3 & 4 */
-#define USER_SW1_SYSCTL_PERIPH (SYSCTL_PERIPH_GPIOD) /* Used to enable the peripheral */
-#define USER_SW1_PORT_BASE (GPIO_PORTD_BASE)
-#define USER_SW1_PIN 	   (GPIO_PIN_6)
+#define USER_SW1_SYSCTL_PERIPH  (SYSCTL_PERIPH_GPIOD) /* Used to enable the peripheral */
+#define USER_SW1_PORT_BASE      (GPIO_PORTD_BASE)
+#define USER_SW1_PIN            (GPIO_PIN_6)
 
-#define USER_SW2_SYSCTL_PERIPH (SYSCTL_PERIPH_GPIOD) /* Used to enable the peripheral */
-#define USER_SW2_PORT_BASE (GPIO_PORTD_BASE)
-#define USER_SW2_PIN 	   (GPIO_PIN_7)
+#define USER_SW2_SYSCTL_PERIPH  (SYSCTL_PERIPH_GPIOD) /* Used to enable the peripheral */
+#define USER_SW2_PORT_BASE      (GPIO_PORTD_BASE)
+#define USER_SW2_PIN            (GPIO_PIN_7)
 
 /* BUMP L/R */
-#define BUMP_L_SW3_SYSCTL_PERIPH (SYSCTL_PERIPH_GPIOE) /* Used to enable the peripheral */
-#define BUMP_L_SW3_PORT_BASE   (GPIO_PORTE_BASE)
-#define BUMP_L_SW3_PIN 		   (GPIO_PIN_1)
+#define BUMP_L_SW3_SYSCTL_PERIPH    (SYSCTL_PERIPH_GPIOE) /* Used to enable the peripheral */
+#define BUMP_L_SW3_PORT_BASE        (GPIO_PORTE_BASE)
+#define BUMP_L_SW3_PIN              (GPIO_PIN_1)
 
-#define BUMP_R_SW4_SYSCTL_PERIPH (SYSCTL_PERIPH_GPIOE) /* Used to enable the peripheral */
-#define BUMP_R_SW4_PORT_BASE (GPIO_PORTE_BASE)
-#define BUMP_R_SW4_PIN 		 (GPIO_PIN_0)
+#define BUMP_R_SW4_SYSCTL_PERIPH    (SYSCTL_PERIPH_GPIOE) /* Used to enable the peripheral */
+#define BUMP_R_SW4_PORT_BASE        (GPIO_PORTE_BASE)
+#define BUMP_R_SW4_PIN              (GPIO_PIN_0)
 
 /* Output LED1 (PF4) & LED2 (PF5) */
-#define LED1_SYSCTL_PERIPH (SYSCTL_PERIPH_GPIOF) /* Used to enable the peripheral */
-#define LED1_PORT_BASE (GPIO_PORTF_BASE)
-#define LED1_PIN	   (GPIO_PIN_4)
+#define LED1_SYSCTL_PERIPH  (SYSCTL_PERIPH_GPIOF) /* Used to enable the peripheral */
+#define LED1_PORT_BASE      (GPIO_PORTF_BASE)
+#define LED1_PIN            (GPIO_PIN_4)
 
-#define LED2_SYSCTL_PERIPH (SYSCTL_PERIPH_GPIOF) /* Used to enable the peripheral */  
-#define LED2_PORT_BASE (GPIO_PORTF_BASE)
-#define LED2_PIN       (GPIO_PIN_5)
+#define LED2_SYSCTL_PERIPH  (SYSCTL_PERIPH_GPIOF) /* Used to enable the peripheral */  
+#define LED2_PORT_BASE      (GPIO_PORTF_BASE)
+#define LED2_PIN            (GPIO_PIN_5)
 
 /*
 http://developer.android.com/guide/topics/usb/adk.html
