@@ -92,6 +92,12 @@
 <listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
 </option>
 <option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.LITTLE_ENDIAN.1234884024" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.LITTLE_ENDIAN" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.DEBUGGING_MODEL.502878393" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.DEBUGGING_MODEL" value="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.DEBUGGING_MODEL.SYMDEBUG__NONE" valueType="enumerated"/>
+<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.OPT_LEVEL.release.216554434" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.OPT_LEVEL.release" value="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.OPT_LEVEL.3" valueType="enumerated"/>
+<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.OPTIMIZER_INTERLIST.531554006" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.OPTIMIZER_INTERLIST" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.SINGLE_INLINE.2103279802" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.SINGLE_INLINE" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.REMOVE_HOOKS_WHEN_INLINING.277878405" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.REMOVE_HOOKS_WHEN_INLINING" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.C_C_PLUS_PLUS_DIALECT.1399930580" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.C_C_PLUS_PLUS_DIALECT" value="com.ti.ccstudio.buildDefinitions.TMS470_4.9.compilerID.C_C_PLUS_PLUS_DIALECT._none" valueType="enumerated"/>
 </tool>
 <tool id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.exe.linkerRelease.710304863" name="TMS470 Linker" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.exe.linkerRelease">
 <option id="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.MAP_FILE.1754710161" superClass="com.ti.ccstudio.buildDefinitions.TMS470_4.9.linkerID.MAP_FILE" value="&quot;EvalBotADK.map&quot;" valueType="string"/>
