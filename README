@@ -1,0 +1,45 @@
+
+It is the public release of USB Host Driver for Android Open Accessory on EvalBot (it should work also with any other Stellaris ARM chipset supporting USB OTG with minor changes).
+
+About Hardware Hack:
+The EvalBot USB Host Power Supply has been hacked because by default it does not work with Usb Host which require more than 100/150mA (due to limitation of hardware) and so I have modified USB Power supply to use external power in order to connect any USB Host compliant with USB specification which allow current until 500mA.
+This Hack also work with any hardware because it's done on a Usb Extension and a BreadBoard with External PowerSupply.
+
+About Software:
+For Android software I have used DemoKit which is just a rebuild of sample in official Android NDK package see http://developer.android.com/guide/topics/usb/adk.html and download package here https://dl-ssl.google.com/android/adk/adk_release_0512.zip.
+Later we could develop our own Android Application but for this release i just used existing DemoKit.
+
+For EvalBot I have developed the Usb Host driver for Open Accessory and an example which communicate with DemoKit,
+The code requires following Texas Instrument package (requires registration which is free):
+1) The code requires TI Code Composer v4 (I use Version: 4.2.4.00033) see http://www.ti.com/tool/ccstudio or directly
+http://processors.wiki.ti.com/index.php/Download_CCS#Download_latest_production_CCSv4_DVD_image and choose "Download latest production CCSv4 DVD image" for the Licence see "Getting a License:" just after, it is totally free and there is no limitation in time or removed options.
+See http://processors.wiki.ti.com/index.php/Licensing_-_CCSv4#Free_Licenses_bundle
+2) Usb Library: http://www.ti.com/tool/sw-usbl => I use SW-USBL-8049.exe which is installed in my example in F:/TI_EvalBot/SW-USBL-8049
+3) EvalBot Firmare:  http://www.ti.com/tool/sw-ek-evalbot => I use SW-EK-EVALBOT-7611.exe which is installed in my example in F:/TI_EvalBot/SW-EK-EVALBOT-7611
+It is maybe possible to rebuild all under a gcc version for ARM M3 with minor changes but I have not tried it and Code Composer is very cool for that with a complete IDE+Compiler and all is free for personal use.
+
+To simplify the development you can mount a virtual drive to F:\ using subst F:\ yourdrive\ or you will need to change paths defined hereafter.
+
+Following Linked resource are required in Code Composer Project(file .project):
+F:/TI_EvalBot/SW-USBL-8049/usblib
+F:/TI_EvalBot/SW-EK-EVALBOT-7611/driverlib
+F:/TI_EvalBot/SW-EK-EVALBOT-7611/inc
+F:/TI_EvalBot/SW-EK-EVALBOT-7611/boards/ek-evalbot/drivers
+F:/TI_EvalBot/SW-EK-EVALBOT-7611/utils
+
+Following Include Options are required in Code Composer Project(file .cdtbuild):
+F:\TI_EvalBot\SW-EK-EVALBOT-7611
+F:\TI_EvalBot\SW-EK-EVALBOT-7611\boards\ek-evalbot
+F:\TI_EvalBot\SW-USBL-8049
+
+What feature included for this demo:
+ With EvalBot if you press Button Switch1, 2 or Bumper Left/Right it send the button/bumper state to DemoKit.
+ With DemoKit you can send command (Relay1 or 2) to switch On/Off EvalBot Leds(Led1 & 2)
+ With DemoKit Servo1=Speed for MotorLeft and Relay1=MotorLeft ON/OFF
+ With DemoKit Servo2=Speed for MotorRight and Relay2=MotorRight ON/OFF
+
+All the code is under GPLv2 and available on GitHub:
+See WebPage https://github.com/TitanMKD/EvalBotADK
+
+My blog to have any news:
+http://titanmkd.blogspot.com
