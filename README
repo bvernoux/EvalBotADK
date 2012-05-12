@@ -7,6 +7,7 @@ This Hack also work with any hardware because it's done on a Usb Extension and a
 
 About Software:
 For Android software I have used DemoKit which is just a rebuild of sample in official Android NDK package see http://developer.android.com/guide/topics/usb/adk.html and download package here https://dl-ssl.google.com/android/adk/adk_release_0512.zip.
+See also in Git directory adk_release_0512_build/AndroidADK_2_3_4_or_more.apk is a compiled ready to install Android ADK from adk_release_0512.
 Later we could develop our own Android Application but for this release i just used existing DemoKit.
 
 For EvalBot I have developed the Usb Host driver for Open Accessory and an example which communicate with DemoKit,
@@ -15,7 +16,7 @@ The code requires following Texas Instrument package (requires registration whic
 http://processors.wiki.ti.com/index.php/Download_CCS#Download_latest_production_CCSv4_DVD_image and choose "Download latest production CCSv4 DVD image" for the Licence see "Getting a License:" just after, it is totally free and there is no limitation in time or removed options.
 See http://processors.wiki.ti.com/index.php/Licensing_-_CCSv4#Free_Licenses_bundle
 2) Usb Library: http://www.ti.com/tool/sw-usbl => I use SW-USBL-8049.exe which is installed in my example in F:/TI_EvalBot/SW-USBL-8049
-3) EvalBot Firmare:  http://www.ti.com/tool/sw-ek-evalbot => I use SW-EK-EVALBOT-7611.exe which is installed in my example in F:/TI_EvalBot/SW-EK-EVALBOT-7611
+3) EvalBot Firmware:  http://www.ti.com/tool/sw-ek-evalbot => I use SW-EK-EVALBOT-7611.exe which is installed in my example in F:/TI_EvalBot/SW-EK-EVALBOT-7611
 It is maybe possible to rebuild all under a gcc version for ARM M3 with minor changes but I have not tried it and Code Composer is very cool for that with a complete IDE+Compiler and all is free for personal use.
 
 To simplify the development you can mount a virtual drive to F:\ using subst F:\ yourdrive\ or you will need to change paths defined hereafter.
